@@ -1,3 +1,5 @@
+#include <cmath>
+
 extern "C" long write(int fd, const void* buf, unsigned long count);
 
 void print_str(const char* str) {
@@ -33,8 +35,6 @@ void print_float(float x) {
         frac_part -= digit;
     }
 }
-
-#include <cmath>
 
 #if defined(__x86_64__) || defined(__i386__)
 #include <immintrin.h>
